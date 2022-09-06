@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model IEnumerable<About>
+
+<div class="privacy about">
+    <h3>Haqqımızda</h3>
+    @foreach (var item in Model)
+   {
+           <p class="animi">
+        @item.Title
+    </p>
+    <div class="agile_about_grids">
+        <div class="col-md-6 agile_about_grid_right">
+            <img src="@item.Image" alt=" " class="img-responsive" style="width:1000px;height:200px"/>
+        </div>
+        <div class="col-md-6 agile_about_grid_left">
+            <ol>
+                <li>@item.Description1</li>
+                <li>@item.Description2</li>
+                <li>@item.Description3</li>
+                <li>@item.Description4</li>
+                <li>@item.Description5</li>
+                <li>@item.Description6</li>
+            </ol>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+   }
+</div>

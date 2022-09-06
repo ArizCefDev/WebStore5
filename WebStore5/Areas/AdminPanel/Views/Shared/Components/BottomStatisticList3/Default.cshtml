@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Employee>
+
+<div class="col-md-6 col-lg-4 order-2 mb-4">
+    <div class="card h-100">
+        <div class="card-header d-flex align-items-center justify-content-between">
+            <h5 class="card-title m-0 me-2">İşçilər siyahısı</h5>
+            <div class="dropdown">
+                <button class="btn p-0"
+                        type="button"
+                        id="transactionID"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                    <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <ul class="p-0 m-0">
+                @foreach (var item in Model)
+                {
+                    <li class="d-flex">
+                        <br />
+                        <div class="avatar flex-shrink-0 me-3">
+                            <img src="@item.Image" alt="User" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                                <small class="text-muted d-block mb-1">@item.Name</small>
+                                <h6 class="mb-0">@item.Work</h6>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

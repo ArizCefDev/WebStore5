@@ -1,0 +1,39 @@
+﻿
+<div class="services-bottom">
+    <div class="container">
+        <div class="col-md-3 about_counter_left">
+            <i class="glyphicon glyphicon-export" aria-hidden="true"></i>
+            <p class="counter">9,147</p>
+            <h3>Məhsullar</h3>
+        </div>
+        <div class="col-md-3 about_counter_left">
+            <i class="glyphicon glyphicon-download" aria-hidden="true"></i>
+            <p class="counter">@ViewBag.discount</p>
+            <h3>Endirimli Məhsullar</h3>
+        </div>
+        <div class="col-md-3 about_counter_left">
+            <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+            <p class="counter">@ViewBag.employee</p>
+            <h3>İşçilər</h3>
+        </div>
+        <div class="col-md-3 about_counter_left">
+            <i class="glyphicon glyphicon-bullhorn" aria-hidden="true"></i>
+            <p class="counter">594</p>
+            <h3>Satış</h3>
+        </div>
+        <div class="clearfix"> </div>
+        <!-- Stats-Number-Scroller-Animation-JavaScript -->
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/counterup.min.js"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+            });
+        </script>
+        <!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+    </div>
+</div>

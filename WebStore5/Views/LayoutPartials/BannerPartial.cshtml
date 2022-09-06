@@ -1,0 +1,47 @@
+﻿
+<div class="w3l_banner_nav_right">
+    <section class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="w3l_banner_nav_right_banner">
+                        <h3>Keyfiyyətli və <span>Sərfəli</span> Məhsullar.</h3>
+                        <div class="more">
+                            <a href="/Product/Index/" class="button--saqui button--round-l button--text-thick" data-text="səhifəyə get">İndi al</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="w3l_banner_nav_right_banner1">
+                        <h3>Ən yeni <span>Meyvə</span> və Tərəvəzlər.</h3>
+                        <div class="more">
+                            <a href="/VegaTable/Index/" class="button--saqui button--round-l button--text-thick" data-text="səhifəyə get">İndi al</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="w3l_banner_nav_right_banner2">
+                        <h3>Məhsularımızda <i>50%-ə qədər</i> Endirim.</h3>
+                        <div class="more">
+                            <a href="/Discount/Index/" class="button--saqui button--round-l button--text-thick" data-text="səhifəyə get">İndi al</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="~/WebStore/css/flexslider.css" type="text/css" media="screen" property="" />
+    <script defer src="~/WebStore/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- //flexSlider -->
+</div>

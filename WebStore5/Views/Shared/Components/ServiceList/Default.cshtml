@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model IEnumerable<Service>
+
+<!-- services -->
+<div class="services">
+    <h3>Xidmətlərimiz</h3>
+    @foreach (var item in Model)
+    {
+        <div class="w3ls_service_grids">
+            <div class="col-md-5 w3ls_service_grid_left">
+                <h4>@item.Title</h4>
+                <p>
+                   @item.Description
+                </p>
+            </div>
+            <div class="col-md-7 w3ls_service_grid_right">
+                <div class="col-md-4 w3ls_service_grid_right_1">
+                    <img src="@item.Image1" alt=" " class="img-responsive" />
+                </div>
+                <div class="col-md-4 w3ls_service_grid_right_1">
+                    <img src="@item.Image2" alt=" " class="img-responsive" />
+                </div>
+                <div class="col-md-4 w3ls_service_grid_right_1">
+                    <img src="@item.Image3" alt=" " class="img-responsive" />
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    }
+</div>
+<!-- //services -->

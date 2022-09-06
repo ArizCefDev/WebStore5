@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+     id="layout-navbar">
+    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="bx bx-menu bx-sm"></i>
+        </a>
+    </div>
+
+    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- Place this tag where you want the button to render. -->
+            <li class="nav-item lh-1 me-3">
+                <a class="github-button"
+                   href="https://github.com/ArizCefDev"
+                   data-icon="octicon-star"
+                   data-size="large"
+                   data-show-count="true"
+                   aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+            </li>
+
+            <!-- User -->
+            @await Component.InvokeAsync("AdminProfile")
+            <!--/ User -->
+        </ul>
+    </div>
+</nav>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+        @await Component.InvokeAsync("AdminDashboard")
+        <div class="col-lg-4 col-md-4 order-1">
+            @await Component.InvokeAsync("RightStatisticList1")
+        </div>
+
+        <!-- Total Revenue -->
+        @await Component.InvokeAsync("MiddleStatisticList")
+        <!--/ Total Revenue -->
+
+        <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+            @await Component.InvokeAsync("RightStatisticList2")
+        </div>
+    </div>
+    <div class="row">
+        <!-- Order Statistics -->
+        @await Component.InvokeAsync("BottomStatisticList1")
+        <!--/ Order Statistics -->
+        <!-- Expense Overview -->
+        @await Component.InvokeAsync("BottomStatisticList2")
+        <!--/ Expense Overview -->
+        <!-- Transactions -->
+        @await Component.InvokeAsync("BottomStatisticList3")
+        <!--/ Transactions -->
+    </div>
+</div>
+

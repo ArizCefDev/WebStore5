@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="w3l_banner_nav_right">
+    <div class="w3l_banner_nav_right_banner9 w3l_banner_nav_right_banner_pet">
+        <h4>Ən kefiyyətli</h4>
+        <p> Heyvan qidaları yalnız bizdə</p>
+        <a href="single.html">İndi al</a>
+    </div>
+    <br />
+    @await Component.InvokeAsync("PetFoodList")
+</div>

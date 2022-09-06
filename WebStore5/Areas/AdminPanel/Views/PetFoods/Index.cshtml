@@ -1,0 +1,103 @@
+﻿@model IEnumerable<EntityLayer.Concrete.PetFood>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+     id="layout-navbar">
+    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="bx bx-menu bx-sm"></i>
+        </a>
+    </div>
+
+    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+        @using (Html.BeginForm())
+        {
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                    <i class="bx bx-search fs-4 lh-0"></i>
+                    @Html.TextBox("s")
+                </div>
+            </div>
+            <!-- /Search -->
+        }
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- Place this tag where you want the button to render. -->
+            <li class="nav-item lh-1 me-3">
+                <a class="github-button"
+                   href="https://github.com/ArizCefDev"
+                   data-icon="octicon-star"
+                   data-size="large"
+                   data-show-count="true"
+                   aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+            </li>
+
+            <!-- User -->
+            @await Component.InvokeAsync("AdminProfile")
+            <!--/ User -->
+        </ul>
+    </div>
+</nav>
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Yeyinti Malları  /</span> Pet qidalar</h4>
+        <!-- Striped Rows -->
+        <div class="card">
+            <h5 class="card-header">Pet qidalar</h5>
+            <a href="/AdminPanel/PetFoods/PetFoodAdd/" class="btn btn-primary">Yeni</a>
+            <div class="table-responsive text-nowrap">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Şəkil</th>
+                            <th>Adı</th>
+                            <th>Çəki</th>
+                            <th>Qiymət</th>
+                            <th>Sil</th>
+                            <th>Güncəllə</th>
+                            <th>Ətraflı</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>
+                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                        <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                            <img src="@item.Image" alt="Avatar" class="rounded-circle" />
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>@item.Name</td>
+                                <td>@item.Kilogram kq</td>
+                                <td>@item.NewPrice azn</td>
+                                <td><a href="/AdminPanel/PetFoods/PetFoodDelete/@item.ID/" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/AdminPanel/PetFoods/PetFoodUpdate/@item.ID/" class="btn btn-success">Güncəllə</a></td>
+                                <td><a href="/AdminPanel/PetFoods/PetFoodDetails/@item.ID/" class="btn btn-info">Ətraflı</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <a href="/AdminPanel/PetFoods/PetFoodAdd/" class="btn btn-primary">Yeni</a>
+        </div>
+        <!--/ Striped Rows -->
+        <div class="content-backdrop fade"></div>
+    </div>
+</div>
+<!-- Content wrapper -->
+
+

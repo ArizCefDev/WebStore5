@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model IEnumerable<Employee>
+
+<!-- team -->
+<div class="team">
+    <div class="container">
+        <h3>İşçilərimiz</h3>
+        <div class="agileits_team_grids">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 agileits_team_grid">
+                    <img src="@item.Image" alt=" " class="img-responsive" style="width:250px;height:200px" />
+                    <h4>@item.Name</h4>
+                    <p>@item.Work</p>
+                    <ul class="agileits_social_icons agileits_social_icons_team">
+                        <li><a href="@item.FacebookURL" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="@item.WhatsappURL" class="twitter"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                        <li><a href="@item.InstagramURL" class="google"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <br>
+                </div>
+               
+            }
+             <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>
+<!-- //team -->

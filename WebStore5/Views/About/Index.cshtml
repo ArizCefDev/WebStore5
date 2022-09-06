@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="w3l_banner_nav_right">
+    <!-- about -->
+    @await Component.InvokeAsync("AboutList")
+    <!-- //about -->
+</div>
+<div class="clearfix"></div>
+@await Component.InvokeAsync("EmployeeList")

@@ -1,0 +1,76 @@
+﻿@model EntityLayer.Concrete.Employee
+@{
+    ViewData["Title"] = "EmployeeUpdate";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <!-- Basic Layout & Basic with Icons -->
+        <div class="row">
+            <!-- Basic Layout -->
+            <div class="col-xxl">
+                <div class="card mb-4">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <h5 class="mb-0">Güncəlləmə etmə səyfəsi</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="row mb-3">
+
+                                <label class="col-sm-2 col-form-label" for="basic-default-name">Şəkil</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Image" class="form-control" id="basic-default-name" placeholder="Məhsul şəklini daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                                <label class="col-sm-2 col-form-label" for="basic-default-name"> Adı</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Name" class="form-control" id="basic-default-name" placeholder="Məhsul adını daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                                <label class="col-sm-2 col-form-label" for="basic-default-name"> İşi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Work" class="form-control" id="basic-default-name" placeholder="Məhsul qiymətini daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                                <label class="col-sm-2 col-form-label" for="basic-default-name"> Facebook linki</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="FacebookURL" class="form-control" id="basic-default-name" placeholder="Məhsul qiymətini daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                                <label class="col-sm-2 col-form-label" for="basic-default-name"> Instagram linki</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="InstagramURL" class="form-control" id="basic-default-name" placeholder="Məhsul qiymətini daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                                <label class="col-sm-2 col-form-label" for="basic-default-name"> Whatsapp linki</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="WhatsappURL" class="form-control" id="basic-default-name" placeholder="Məhsul qiymətini daxil edin" />
+                                </div>
+                                <br />
+                                <br />
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-success">Güncəllə</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Basic with Icons -->
+        </div>
+    </div>
+
+    <div class="content-backdrop fade"></div>
+</div>
+<!-- Content wrapper -->

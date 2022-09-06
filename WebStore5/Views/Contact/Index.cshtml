@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="w3l_banner_nav_right">
+    <!-- mail -->
+    <div class="mail">
+        <h3>Bizimlə əlaqə</h3>
+        <div class="agileinfo_mail_grids">
+            <div class="col-md-4 agileinfo_mail_grid_left">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i></li>
+                    <li>address<span>Sumqayıt şəh. Azərbaycan</span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                    <li>email<span><a href="mailto:info@example.com">arizcefdev@gmail.com</a></span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li>tel<span>(+994) 070 309 0322</span></li>
+                </ul>
+            </div>
+            <div class="col-md-8 agileinfo_mail_grid_right">
+                <form method="post">
+                    <div class="col-md-6 wthree_contact_left_grid">
+                        <input type="text" name="Name" value="Adınızı daxil edin*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name*';}" required="">
+                        <input type="email" name="Email" value="Gmailinizi daxil edin*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email*';}" required="">
+                    </div>
+                    <div class="col-md-6 wthree_contact_left_grid">
+                        <input type="text" name="Phone" value="Telefonunuzu daxil edin*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone*';}" required="">
+                        <input type="text" name="Subject" value="Mövzunu daxil edin*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject*';}" required="">
+                    </div>
+                    <div class="clearfix"> </div>
+                    <textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Mesajı daxil edin</textarea>
+                    <input type="submit" value="Göndər">
+                    <input type="reset" value="Təmizlə">
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //mail -->
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96969.94857270917!2d49.561040157672316!3d40.57889253295656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403096dcd0923f6b%3A0xdf4767c369322a71!2zU3VtcWF5xLF0LCBBesmZcmJheWNhbg!5e0!3m2!1saz!2s!4v1660200078500!5m2!1saz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+

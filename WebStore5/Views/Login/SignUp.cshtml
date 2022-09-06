@@ -1,0 +1,53 @@
+﻿@model WebStore5.Models.UserRegisterViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<!-- login -->
+		<div class="w3_login">
+			<h3>Qeydiyyat et</h3>
+			<div class="w3_login_module">
+				<div class="module form-module">
+				  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+				  </div>
+
+				  <div class="form">
+					<h2>Hesabını yarat</h2>
+
+					<form method="post">
+
+					  <input type="text" asp-for="UserName" placeholder="İstifadəçi adınızı daxil edin" >
+					  <span asp-validation-for="UserName" class="errormesage"></span>
+
+					  <input type="password" asp-for="Password" placeholder="Şifrənizi daxil edin" >
+					  <span asp-validation-for="Password" class="errormesage"></span>
+
+					  <input type="password" asp-for="ConfirmPassword" placeholder="Təkrar şifrənizi daxil edin" >
+					  <span asp-validation-for="ConfirmPassword" class="errormesage"></span>
+		
+					  <input type="submit" value="Qeyd ol">
+
+					  <div class="errormesage" asp-validation-summary="ModelOnly">
+
+					  </div>
+					</form>
+				  </div>
+				</div>
+			</div>
+			<script>
+				$('.toggle').click(function(){
+				  // Switches the Icon
+				  $(this).children('i').toggleClass('fa-pencil');
+				  // Switches the forms  
+				  $('.form').animate({
+					height: "toggle",
+					'padding-top': 'toggle',
+					'padding-bottom': 'toggle',
+					opacity: "toggle"
+				  }, "slow");
+				});
+			</script>
+		</div>
+<!-- //login -->
+
